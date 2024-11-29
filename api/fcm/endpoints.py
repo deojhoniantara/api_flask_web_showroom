@@ -21,6 +21,7 @@ def send():
         body = request.form['body']
         aux_data = request.form['aux_data']
         fcm_token = request.form['fcm_token']
+
         response_fcm = send_fcm(title=title, body=body, aux_data={
                                 "payload": aux_data}, fcm_token=fcm_token)
 

@@ -1,14 +1,44 @@
 """Routes for module books"""
 import os
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, Response
 from helper.db_helper import get_connection
 from helper.form_validation import get_form_data
+import msgpack
+from datetime import datetime
+from flasgger import swag_from
+
 
 books_endpoints = Blueprint('books', __name__)
 UPLOAD_FOLDER = "img"
 
+#pip install msgpack
+def default_datetime_handler(obj):
+    """Convert datetime objects to ISO format strings."""
+    if isinstance(obj, datetime):
+        return obj.isoformat()
+    raise TypeError("Type not serializable")
+
+
+@books_endpoints.route('/read-msgpack', methods=['GET'])
+def read_msgpack():
+    """Routes for module get list books"""
+    connection = get_connection()
+    cursor = connection.cursor(dictionary=True)
+    select_query = "SELECT * FROM tb_books"
+    cursor.execute(select_query)
+    results = cursor.fetchall()
+    cursor.close()  # Close the cursor after query execution
+
+    # Convert results to msgpack format
+    msgpack_data = msgpack.packb({"message": "OK", "datas": results}, 
+                                 default=default_datetime_handler, use_bin_type=True)
+
+    # Return the response with the correct MIME type for msgpack
+    return Response(msgpack_data, content_type='application/x-msgpack', status=200)
+    # return jsonify({"message": "OK", "datas": results}), 200
 
 @books_endpoints.route('/read', methods=['GET'])
+@swag_from('docs/read_books.yml')
 def read():
     """Routes for module get list books"""
     connection = get_connection()
