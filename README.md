@@ -1,22 +1,12 @@
-# 🚗 Showroom Vehicles API
+# 🚗 API Flask Web Showroom
 
-Backend RESTful API untuk aplikasi showroom kendaraan berbasis **Flask** dan **MySQL** dengan JWT Authentication dan arsitektur modular Blueprint. Project ini dilengkapi **database SQL dump** dan **Postman Collection** untuk memudahkan testing oleh rekan developer.
-
----
-
-## ✨ Fitur Utama
-
-- Register user (Dealer & Individual)
-- Login JWT
-- CRUD Users (Dealer & Individual)
-- CRUD Vehicles (New & Used)
-- Testing API via Postman Collection
+Repository ini berisi aplikasi backend berbasis Flask untuk kebutuhan showroom kendaraan. Proyek ini mendukung pengujian API menggunakan Postman, pengelolaan database menggunakan SQL, dan dapat dikembangkan lebih lanjut untuk kebutuhan showroom berbasis web atau mobile.
 
 ---
 
-## ⚙️ **Langkah Instalasi dan Setup**
+## 🧰 Persiapan Awal
 
-### 🔹 **1. Clone Repository**
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/deojhoniantara/api_flask_web_showroom.git
