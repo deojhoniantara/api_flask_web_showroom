@@ -11,3 +11,14 @@ Repository ini berisi aplikasi backend berbasis Flask untuk kebutuhan showroom k
 ```bash
 git clone https://github.com/deojhoniantara/api_flask_web_showroom.git
 cd api_flask_web_showroom
+```
+
+### 2. Setup Environment
+
+```bash
+python -m venv venv
+.\venv\Scripts\activate        # Windows
+pip install -r requirements.txt
+```
+
+### 
