@@ -1,0 +1,966 @@
+{
+	"info": {
+		"_postman_id": "59e24889-695d-4b71-a1b2-dde39f9ad83a",
+		"name": "api_flask_web_showroom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39811856"
+	},
+	"item": [
+		{
+			"name": "authentication user",
+			"item": [
+				{
+					"name": "/api/v1/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "alex@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "alex123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/auth/login",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authentication admin",
+			"item": [
+				{
+					"name": "/api/v1/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/admins/login",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admins",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "/api/v1/users/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/users/individuals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/individuals",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"individuals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/users/dealers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/dealers",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"dealers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/users/register individual",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ucup",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ucup@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ucup123",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "individual",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Banyuasri",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123456788",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/register",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/users/register dealer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Toyota Jaya",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "toyotajaya@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "toyotajaya123",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "dealer",
+									"type": "text"
+								},
+								{
+									"key": "dealer_name",
+									"value": "Toyota Jaya",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Penarukan",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "98745632",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/register",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/users/ individual",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "johndoe@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "johndoe123",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Sambangan",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12797553",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "individual",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/users/ dealer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Honda Kasih",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "honda@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "honda123",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Paris",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "78564987",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "dealer",
+									"type": "text"
+								},
+								{
+									"key": "dealer_name",
+									"value": "Honda Kasih",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/2",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/users/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{flask_local}}/api/v1/users/6",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicles",
+			"item": [
+				{
+					"name": "/api/v1/vehicles/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "alice_johnson",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/vehicles/",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/vehicles/create used",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTQ2NDEzNiwianRpIjoiNjA0NzM4NmEtNjFlZS00OGFlLTgyYzQtNzAzMjI4MzA5ZmNhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjMiLCJuYmYiOjE3NTE0NjQxMzYsImNzcmYiOiJjYWM4OTgyMS0zNjM4LTQwMTctYWU4Ni04NjNhMzI2MTVmMjEiLCJleHAiOjE3NTE0Njc3MzYsInJvbGUiOiJpbmRpdmlkdWFsIiwiZW1haWwiOiJhbGV4QG1haWwuY29tIn0.o-_1Y2E5V6urnxeLMKfyHc3G4w86wO0AHR32sqlaHgQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Avanza",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "197000000",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "Toyota",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "used",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "Manual",
+									"type": "text"
+								},
+								{
+									"key": "seats",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Putih",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2021",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Singaraja",
+									"type": "text"
+								},
+								{
+									"key": "fuel_type",
+									"value": "Pertamax",
+									"type": "text"
+								},
+								{
+									"key": "mileage",
+									"value": "75000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/vehicles/create",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/vehicles/create new",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTQ2MjkzMSwianRpIjoiYzFjYmRlNzEtNDliMC00NzdlLTlhMjgtMjljYzFhNDIwMTY5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NTE0NjI5MzEsImNzcmYiOiJmZGY0NjViNC02YTg2LTQwZGQtODllZC02YTUyZTg1MDNiMmMiLCJleHAiOjE3NTE0NjY1MzEsInJvbGUiOiJkZWFsZXIiLCJlbWFpbCI6ImhvbmRhQG1haWwuY29tIn0.vdIWkacsJGPjkOc_Y-0MjxLC4qmwvN9u3hAqqt7IbxY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jazz",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "197000000",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "Honda",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "new",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "Manual",
+									"type": "text"
+								},
+								{
+									"key": "seats",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Merah",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2021",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Singaraja",
+									"type": "text"
+								},
+								{
+									"key": "fuel_type",
+									"value": "Pertamax",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/vehicles/create",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/vehicles/update/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTQ2MjkzMSwianRpIjoiYzFjYmRlNzEtNDliMC00NzdlLTlhMjgtMjljYzFhNDIwMTY5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3NTE0NjI5MzEsImNzcmYiOiJmZGY0NjViNC02YTg2LTQwZGQtODllZC02YTUyZTg1MDNiMmMiLCJleHAiOjE3NTE0NjY1MzEsInJvbGUiOiJkZWFsZXIiLCJlbWFpbCI6ImhvbmRhQG1haWwuY29tIn0.vdIWkacsJGPjkOc_Y-0MjxLC4qmwvN9u3hAqqt7IbxY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jazz",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "293000000",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "Honda",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "new",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "Manual",
+									"type": "text"
+								},
+								{
+									"key": "seats",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Merah",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2021",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Singaraja",
+									"type": "text"
+								},
+								{
+									"key": "fuel_type",
+									"value": "Pertamax",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/vehicles/update/2",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/vehicles/delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTQ2NDEzNiwianRpIjoiNjA0NzM4NmEtNjFlZS00OGFlLTgyYzQtNzAzMjI4MzA5ZmNhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjMiLCJuYmYiOjE3NTE0NjQxMzYsImNzcmYiOiJjYWM4OTgyMS0zNjM4LTQwMTctYWU4Ni04NjNhMzI2MTVmMjEiLCJleHAiOjE3NTE0Njc3MzYsInJvbGUiOiJpbmRpdmlkdWFsIiwiZW1haWwiOiJhbGV4QG1haWwuY29tIn0.o-_1Y2E5V6urnxeLMKfyHc3G4w86wO0AHR32sqlaHgQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "alice_johnson",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/vehicles/delete/3",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "articles",
+			"item": [
+				{
+					"name": "/api/v1/articles/read",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "alice_johnson",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/articles/read",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"articles",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/articles/create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTM4NDc0MywianRpIjoiYzg3YWYzMzUtZjUzYy00NDY3LTk5MTktN2RmZjc5OTU2MzExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTEzODQ3NDMsImNzcmYiOiJhMmFjMTY2My00ODY4LTQ5M2UtODE1MS01NWNhYTQ0YjUwZDIiLCJleHAiOjE3NTEzODgzNDMsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20ifQ.wKXeJX8u25H6m1TASk01UdIczNbU29VrbHeNeRWZyKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "CARA MERAWAT MOBIL TUA - test",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/articles/create",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"articles",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/articles/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTM4NDc0MywianRpIjoiYzg3YWYzMzUtZjUzYy00NDY3LTk5MTktN2RmZjc5OTU2MzExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTEzODQ3NDMsImNzcmYiOiJhMmFjMTY2My00ODY4LTQ5M2UtODE1MS01NWNhYTQ0YjUwZDIiLCJleHAiOjE3NTEzODgzNDMsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20ifQ.wKXeJX8u25H6m1TASk01UdIczNbU29VrbHeNeRWZyKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "CARA MERAWAT MOBIL TUA - update",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/articles/update/1",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"articles",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v1/articles/delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTM4NDc0MywianRpIjoiYzg3YWYzMzUtZjUzYy00NDY3LTk5MTktN2RmZjc5OTU2MzExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTEzODQ3NDMsImNzcmYiOiJhMmFjMTY2My00ODY4LTQ5M2UtODE1MS01NWNhYTQ0YjUwZDIiLCJleHAiOjE3NTEzODgzNDMsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20ifQ.wKXeJX8u25H6m1TASk01UdIczNbU29VrbHeNeRWZyKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "CARA MERAWAT MOBIL TUA - update",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{flask_local}}/api/v1/articles/delete/2",
+							"host": [
+								"{{flask_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"articles",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "flask_local",
+			"value": "http://127.0.0.1:5000"
+		}
+	]
+}
