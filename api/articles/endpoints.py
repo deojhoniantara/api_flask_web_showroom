@@ -73,7 +73,7 @@ def create_article():
 @articles_endpoints.route('/update/<int:article_id>', methods=['PUT'])
 @jwt_required()
 def update_article(article_id):
-    claims = get_jwt()
+    claims = get_jwt_identity()
     if claims.get('role') != 'admin':
         return jsonify({"msg": "Admin only"}), 403
     
@@ -103,7 +103,7 @@ def update_article(article_id):
 @articles_endpoints.route('/delete/<int:article_id>', methods=['DELETE'])
 @jwt_required()
 def delete_article(article_id):
-    claims = get_jwt()
+    claims = get_jwt_identity()
     if claims.get('role') != 'admin':   
         return jsonify({"msg": "Admin only"}), 403
     
