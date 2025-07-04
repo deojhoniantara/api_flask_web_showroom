@@ -3,15 +3,15 @@
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/deojhoniantara/api_flask_web_showroom.git
-cd api_flask_web_showroom
+git clone https://github.com/deojhoniantara/api_flask_web_showroom_kompleks.git
+cd api_flask_web_showroom_kompleks
 ```  
 
 ### 2. Setup Environment
 
 ```bash
 python -m venv venv
-.\venv\Scripts\activate        # Windows
+.\venv\Scripts\activate        
 pip install -r requirements.txt
 ```  
 
